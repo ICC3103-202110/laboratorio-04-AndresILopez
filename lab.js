@@ -6,17 +6,18 @@ function update(msg, counter){
     if (msg === "+")
         counter += 1;
     if (msg === "-")
-        if (msg != 0)
-            counter -= 1;
-    if (msg === "q")
-        Process.exit;
+        counter -= 1;
     return counter
 }
 
 function app(counter){
     while(true)
+        const currentView = view(counter)
+        console.clear()
+        console.log(currentView)
+        
 
     return
 }
 
-console.log(view(1));
+app(0)
