@@ -11,12 +11,16 @@ function update(msg, counter){
 }
 
 function app(counter){
-    while(true)
-        const currentView = view(counter)
+    while(true){
+        const currentView = view(counter);
         console.clear()
         console.log(currentView)
-        
-
+        const prompt = require('prompt-sync')();
+        const msg = prompt();
+        if (msg === "q")
+            break
+        var counter = update(msg, counter);
+    }
     return
 }
 
